@@ -4,18 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Rhinestone Hair Comb - Aksesoris Rambut Mewah | FASHION.ID</title>
-    <meta name="description" content="Star Rhinestone Hair Comb - Aksesoris rambut mewah dengan desain Korea. Nyaman dipakai seharian, bahan lembut, dan tahan lama. Pesan sekarang dengan harga spesial!">
-    
-    <!-- Fonts -->
+    <meta name="description" content="Star Rhinestone Hair Comb - Sisir hias mewah dengan rhinestone untuk tampilan elegan. Nyaman dipakai seharian, bahan lembut, dan desain Korea kekinian.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Segoe+UI:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
-    
     <style>
-        /* CSS Reset & Base Styles */
+        /* Reset & Base Styles */
         :root {
             --black: #000000;
             --dark-gray: #4a4a4a;
@@ -25,113 +19,124 @@
             --silver: #c0c0c0;
             --gold: #ffd700;
             --primary-gradient: linear-gradient(135deg, #000000 0%, #4a4a4a 100%);
-            --secondary-gradient: linear-gradient(to right, #c0c0c0, #ffffff);
-            --glass-bg: rgba(255, 255, 255, 0.15);
-            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.1);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --radius-xl: 32px;
             --transition: all 0.3s ease;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             color: var(--dark-gray);
-            line-height: 1.6;
             background-color: var(--white);
+            line-height: 1.6;
             overflow-x: hidden;
         }
-        
+
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Georgia', serif;
             font-weight: 700;
             color: var(--black);
             line-height: 1.3;
         }
-        
+
         img {
             max-width: 100%;
             height: auto;
             display: block;
         }
-        
+
         a {
             text-decoration: none;
             color: inherit;
         }
-        
+
         button, .btn {
             cursor: pointer;
-            transition: var(--transition);
-            border: none;
             font-family: 'Segoe UI', sans-serif;
             font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            outline: none;
         }
-        
+
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         .section {
             padding: 80px 0;
         }
-        
+
         .section-title {
             font-size: clamp(1.75rem, 3vw, 2.5rem);
             margin-bottom: 1.5rem;
             text-align: center;
             position: relative;
             display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
         }
-        
-        .section-title::after {
+
+        .section-title:after {
             content: '';
             position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 100%;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
             height: 3px;
             background: var(--primary-gradient);
-            border-radius: 3px;
         }
-        
+
         .text-center {
             text-align: center;
         }
-        
+
         .mb-1 { margin-bottom: 0.5rem; }
         .mb-2 { margin-bottom: 1rem; }
         .mb-3 { margin-bottom: 1.5rem; }
         .mb-4 { margin-bottom: 2rem; }
         .mb-5 { margin-bottom: 3rem; }
-        
-        /* Header Styles */
+
+        /* Header */
         header {
-            background-color: var(--white);
-            box-shadow: var(--shadow-sm);
             position: fixed;
-            width: 100%;
             top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow-sm);
             z-index: 1000;
+            transition: var(--transition);
         }
-        
+
+        header.scrolled {
+            padding: 0.5rem 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
         }
-        
+
         .logo {
             font-family: 'Georgia', serif;
             font-size: 1.5rem;
@@ -140,270 +145,435 @@
             display: flex;
             align-items: center;
         }
-        
-        .logo span {
-            color: var(--silver);
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
         }
-        
-        .nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--black);
-        }
-        
-        .nav-menu {
+
+        .nav-links {
             display: flex;
-            list-style: none;
+            gap: 2rem;
         }
-        
-        .nav-menu li {
-            margin-left: 2rem;
-        }
-        
-        .nav-menu a {
+
+        .nav-links a {
             font-weight: 600;
             position: relative;
-            padding: 0.5rem 0;
         }
-        
-        .nav-menu a::after {
+
+        .nav-links a:after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -5px;
             left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--black);
+            background: var(--black);
             transition: var(--transition);
         }
-        
-        .nav-menu a:hover::after {
+
+        .nav-links a:hover:after {
             width: 100%;
         }
-        
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            font-size: 1.5rem;
+            color: var(--black);
+        }
+
         /* Hero Section */
         .hero {
             height: 100vh;
             min-height: 700px;
-            background: url('https://cdn.techcloudly.com/image/fedb3fc4794b7326d55139084e1a7b7e4c22f8a9-700.webp') no-repeat center center/cover;
+            background: url('https://cdn.techcloudly.com/image/f81d2360c218a27a24d241b74173c71935dc9a5e.jpeg') no-repeat center center/cover;
             position: relative;
             display: flex;
             align-items: center;
-            margin-top: 68px;
+            color: var(--white);
+            margin-top: 72px;
         }
-        
-        .hero::before {
+
+        .hero:before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+            background: var(--primary-gradient);
+            opacity: 0.8;
         }
-        
+
         .hero-content {
             position: relative;
             z-index: 1;
-            color: var(--white);
             max-width: 600px;
-            padding: 0 20px;
         }
-        
+
         .hero-title {
             font-size: clamp(2.5rem, 5vw, 4rem);
             margin-bottom: 1.5rem;
             line-height: 1.2;
         }
-        
+
         .hero-subtitle {
             font-size: 1.25rem;
             margin-bottom: 2rem;
-            font-weight: 300;
+            opacity: 0.9;
         }
-        
-        .hero-buttons {
+
+        .hero-btns {
             display: flex;
             gap: 1rem;
-            flex-wrap: wrap;
+            margin-top: 2rem;
         }
-        
+
         .btn {
-            padding: 12px 24px;
-            border-radius: 30px;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-md);
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
-        
+
         .btn-primary {
-            background-color: var(--silver);
-            color: var(--black);
-        }
-        
-        .btn-primary:hover {
-            background-color: var(--white);
-            transform: translateY(-3px);
+            background-color: var(--black);
+            color: var(--white);
             box-shadow: var(--shadow-md);
         }
-        
+
+        .btn-primary:hover {
+            background-color: var(--dark-gray);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
         .btn-secondary {
             background-color: transparent;
             color: var(--white);
             border: 2px solid var(--white);
         }
-        
+
         .btn-secondary:hover {
-            background-color: rgba(255,255,255,0.1);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
         }
-        
-        .hero-badges {
+
+        .trust-badges {
             display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
             flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 3rem;
+            align-items: center;
         }
-        
-        .badge {
-            background-color: rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.75rem;
+
+        .trust-badge {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            backdrop-filter: blur(5px);
         }
-        
+
         /* Product Showcase */
         .product-showcase {
             background-color: var(--white);
         }
-        
+
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
         .product-gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 3rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
         }
-        
-        .gallery-item {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
+
+        .product-gallery img {
+            border-radius: var(--radius-md);
+            cursor: pointer;
             transition: var(--transition);
-            position: relative;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .gallery-item img {
             width: 100%;
             height: auto;
             object-fit: cover;
         }
-        
+
+        .product-gallery img:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-md);
+        }
+
+        .gallery-main {
+            grid-column: span 2;
+        }
+
+        .product-details {
+            position: sticky;
+            top: 100px;
+        }
+
+        .product-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-price {
+            margin-bottom: 1.5rem;
+        }
+
+        .current-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .original-price {
+            font-size: 1.25rem;
+            text-decoration: line-through;
+            color: var(--medium-gray);
+            margin-left: 0.5rem;
+        }
+
+        .discount-badge {
+            display: inline-block;
+            background-color: #ff4444;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .product-description {
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .product-features {
+            margin-bottom: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-icon {
+            color: var(--silver);
+            font-size: 1.25rem;
+            margin-top: 0.25rem;
+        }
+
+        .promo-bundles {
+            background: rgba(192, 192, 192, 0.1);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px dashed var(--silver);
+        }
+
+        .promo-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--black);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .promo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .promo-item:last-child {
+            border-bottom: none;
+        }
+
+        .promo-label {
+            font-weight: 600;
+        }
+
+        .promo-price {
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .promo-original {
+            font-size: 0.875rem;
+            text-decoration: line-through;
+            color: var(--medium-gray);
+        }
+
+        .color-options {
+            margin-bottom: 2rem;
+        }
+
+        .color-options h4 {
+            margin-bottom: 1rem;
+        }
+
+        .colors {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .color {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .color:hover {
+            transform: scale(1.1);
+        }
+
+        .color.active {
+            border-color: var(--black);
+        }
+
+        .color-1 { background-color: #000000; }
+        .color-2 { background-color: #c0c0c0; }
+        .color-3 { background-color: #ffd700; }
+        .color-4 { background-color: #ff69b4; }
+
+        .note {
+            font-size: 0.875rem;
+            color: var(--medium-gray);
+            font-style: italic;
+        }
+
+        /* Video Demo */
+        .video-demo {
+            background-color: #f9f9f9;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
         .video-container {
-            grid-column: span 3;
-            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: var(--radius-lg);
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
+            box-shadow: var(--shadow-lg);
         }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+
+        .video-container video {
             width: 100%;
-            height: 100%;
-            border: none;
+            display: block;
         }
-        
+
         /* Features Section */
         .features {
-            background-color: #f9f9f9;
+            background-color: var(--white);
         }
-        
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
-        
+
         .feature-card {
-            background-color: var(--white);
-            border-radius: 10px;
+            background: var(--white);
+            border-radius: var(--radius-md);
             padding: 2rem;
+            text-align: center;
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
-            text-align: center;
         }
-        
+
         .feature-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-md);
         }
-        
-        .feature-icon {
+
+        .feature-icon-lg {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
             color: var(--silver);
+            margin-bottom: 1.5rem;
         }
-        
-        .feature-title {
-            font-size: 1.25rem;
+
+        .feature-card h3 {
             margin-bottom: 1rem;
         }
-        
-        /* Testimonials Section */
+
+        /* Testimonials */
         .testimonials {
-            background-color: var(--white);
+            background-color: #f9f9f9;
         }
-        
-        .testimonial-slider {
+
+        .testimonials-container {
             position: relative;
             max-width: 1200px;
-            margin: 3rem auto 0;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .testimonials-slider {
+            margin-top: 3rem;
+            position: relative;
             overflow: hidden;
         }
-        
-        .testimonial-track {
+
+        .testimonials-track {
             display: flex;
             transition: transform 0.5s ease;
         }
-        
+
         .testimonial-card {
-            min-width: 100%;
+            flex: 0 0 100%;
             padding: 0 15px;
-            box-sizing: border-box;
         }
-        
-        .testimonial-content {
-            background-color: var(--white);
-            border-radius: 10px;
-            padding: 2rem;
+
+        @media (min-width: 768px) {
+            .testimonial-card {
+                flex: 0 0 50%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .testimonial-card {
+                flex: 0 0 33.333%;
+            }
+        }
+
+        .testimonial {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
             box-shadow: var(--shadow-sm);
-            border: 1px solid var(--light-gray);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
-        
+
         .testimonial-header {
             display: flex;
             align-items: center;
             margin-bottom: 1rem;
         }
-        
+
         .testimonial-avatar {
             width: 40px;
             height: 40px;
@@ -411,563 +581,883 @@
             object-fit: cover;
             margin-right: 1rem;
         }
-        
+
         .testimonial-user {
             flex: 1;
         }
-        
+
         .testimonial-name {
             font-weight: 600;
             margin-bottom: 0.25rem;
         }
-        
+
         .testimonial-rating {
             color: var(--gold);
-            font-size: 1rem;
+            font-size: 0.875rem;
         }
-        
+
         .testimonial-text {
             margin-bottom: 1rem;
-            font-style: italic;
+            flex: 1;
         }
-        
+
         .testimonial-media {
-            display: inline-block;
+            margin-top: auto;
+        }
+
+        .testimonial-image {
             width: 80px;
             height: 80px;
-            border-radius: 5px;
+            border-radius: var(--radius-sm);
             object-fit: cover;
             cursor: pointer;
             transition: var(--transition);
         }
-        
-        .testimonial-media:hover {
+
+        .testimonial-image:hover {
             transform: scale(1.05);
         }
-        
+
         .slider-nav {
             display: flex;
             justify-content: center;
             margin-top: 2rem;
         }
-        
+
         .slider-dot {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
-            background-color: var(--light-gray);
+            background: var(--light-gray);
             margin: 0 5px;
             cursor: pointer;
             transition: var(--transition);
         }
-        
+
         .slider-dot.active {
-            background-color: var(--silver);
+            background: var(--black);
         }
-        
-        /* Lightbox Styles */
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+            cursor: pointer;
+            z-index: 10;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .slider-arrow:hover {
+            opacity: 1;
+            box-shadow: var(--shadow-md);
+        }
+
+        .slider-arrow.prev {
+            left: 0;
+        }
+
+        .slider-arrow.next {
+            right: 0;
+        }
+
+        /* Lightbox */
         .lightbox {
-            display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .lightbox.show {
+            background: rgba(0, 0, 0, 0.8);
             display: flex;
-            opacity: 1;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
         }
-        
+
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
         .lightbox-content {
             position: relative;
             max-width: 90%;
             max-height: 90%;
         }
-        
+
         .lightbox-img {
-            max-height: 80vh;
             max-width: 100%;
-            border-radius: 5px;
+            max-height: 80vh;
+            border-radius: var(--radius-md);
         }
-        
+
         .lightbox-close {
             position: absolute;
             top: -40px;
             right: 0;
             color: var(--white);
-            font-size: 2rem;
+            font-size: 1.5rem;
             cursor: pointer;
         }
-        
+
         /* Pricing Section */
         .pricing {
-            background-color: #f9f9f9;
+            background-color: var(--white);
         }
-        
+
         .pricing-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
-        
+
         .pricing-card {
-            background-color: var(--white);
-            border-radius: 10px;
+            background: var(--white);
+            border-radius: var(--radius-md);
             padding: 2rem;
+            text-align: center;
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
-            text-align: center;
-            border: 2px solid transparent;
+            border: 1px solid var(--light-gray);
         }
-        
+
         .pricing-card.popular {
-            border-color: var(--silver);
+            border: 2px solid var(--silver);
             position: relative;
+            transform: scale(1.05);
         }
-        
-        .pricing-card.popular::before {
-            content: 'Paling Laris';
+
+        .popular-badge {
             position: absolute;
             top: -12px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: var(--silver);
-            color: var(--black);
-            padding: 3px 15px;
-            border-radius: 20px;
+            background: var(--black);
+            color: var(--white);
+            padding: 0.25rem 1rem;
+            border-radius: var(--radius-xl);
             font-size: 0.75rem;
             font-weight: 600;
         }
-        
+
         .pricing-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-md);
         }
-        
+
+        .pricing-card.popular:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+
         .pricing-title {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             margin-bottom: 1rem;
         }
-        
+
         .pricing-price {
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 1rem;
             color: var(--black);
         }
-        
+
         .pricing-original {
+            font-size: 1.25rem;
             text-decoration: line-through;
             color: var(--medium-gray);
-            font-size: 1.25rem;
             margin-bottom: 1rem;
             display: block;
         }
-        
+
         .pricing-features {
-            list-style: none;
-            margin-bottom: 2rem;
+            margin: 2rem 0;
+            text-align: left;
         }
-        
-        .pricing-features li {
-            margin-bottom: 0.5rem;
-            position: relative;
-            padding-left: 1.5rem;
+
+        .pricing-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
         }
-        
-        .pricing-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
+
+        .pricing-feature i {
             color: var(--silver);
-            font-weight: bold;
         }
-        
+
         .countdown {
-            background-color: rgba(192, 192, 192, 0.2);
+            background: rgba(192, 192, 192, 0.1);
+            border-radius: var(--radius-md);
             padding: 1rem;
-            border-radius: 5px;
             margin-bottom: 2rem;
-            font-weight: 600;
+            text-align: center;
         }
-        
+
+        .countdown-title {
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+            color: var(--medium-gray);
+        }
+
         .countdown-timer {
-            font-size: 1.25rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .countdown-number {
+            font-size: 1.5rem;
+            font-weight: 700;
             color: var(--black);
-            margin-top: 0.5rem;
         }
-        
-        /* Order Form Section */
+
+        .countdown-label {
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            color: var(--medium-gray);
+        }
+
+        /* Order Form */
         .order-form {
-            background-color: var(--white);
+            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+            padding: 5rem 0;
         }
-        
+
         .form-container {
             max-width: 800px;
             margin: 0 auto;
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 2rem;
+            background: var(--white);
+            border-radius: var(--radius-lg);
             box-shadow: var(--shadow-lg);
-            border: 1px solid rgba(255,255,255,0.2);
+            overflow: hidden;
         }
-        
-        /* Social Proof Popup */
+
+        .form-header {
+            background: var(--primary-gradient);
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-subtitle {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        .form-body {
+            padding: 2rem;
+        }
+
+        /* Custom OrderOnline Form Styling */
+        .ooef {
+            background: transparent !important;
+            padding: 0 !important;
+        }
+
+        .orderonline-embed-form {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Social Proof Notifications */
         .social-proof {
             position: fixed;
             top: 20px;
             right: 20px;
-            z-index: 1500;
+            z-index: 1000;
             max-width: 300px;
-            background-color: var(--white);
-            border-radius: 8px;
+        }
+
+        .proof-notification {
+            background: var(--white);
+            border-radius: var(--radius-md);
             box-shadow: var(--shadow-lg);
-            padding: 15px;
+            padding: 1rem;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
+            gap: 1rem;
+            position: relative;
             transform: translateX(120%);
-            transition: transform 0.5s ease;
+            transition: transform 0.5s ease, opacity 0.3s ease;
+            opacity: 0;
             border-left: 4px solid var(--silver);
         }
-        
-        .social-proof.show {
+
+        .proof-notification.show {
             transform: translateX(0);
+            opacity: 1;
         }
-        
-        .social-proof-avatar {
+
+        .proof-avatar {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: var(--light-gray);
+            background: var(--light-gray);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 15px;
             font-weight: 600;
             color: var(--dark-gray);
+            flex-shrink: 0;
         }
-        
-        .social-proof-content {
+
+        .proof-content {
             flex: 1;
         }
-        
-        .social-proof-text {
+
+        .proof-text {
             font-size: 0.875rem;
             line-height: 1.4;
         }
-        
-        .social-proof-time {
+
+        .proof-time {
             font-size: 0.75rem;
             color: var(--medium-gray);
-            margin-top: 3px;
+            margin-top: 0.25rem;
         }
-        
+
+        .proof-close {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 0.75rem;
+            color: var(--medium-gray);
+            cursor: pointer;
+        }
+
+        /* Guarantee Section */
+        .guarantee {
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .guarantee-badge {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-gradient);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+
+        .guarantee-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .payment-method {
+            height: 30px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .payment-method:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: var(--white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid var(--light-gray);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1rem;
+            background: #f9f9f9;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 1rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1rem;
+            max-height: 500px;
+        }
+
         /* Footer */
         footer {
             background-color: var(--black);
             color: var(--white);
-            padding: 60px 0 20px;
+            padding: 4rem 0 2rem;
         }
-        
-        .footer-grid {
+
+        .footer-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
             margin-bottom: 3rem;
         }
-        
-        .footer-col h3 {
-            color: var(--white);
+
+        .footer-logo {
+            font-family: 'Georgia', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .footer-about {
+            max-width: 300px;
+        }
+
+        .footer-title {
+            font-size: 1.125rem;
             margin-bottom: 1.5rem;
-            font-size: 1.25rem;
+            position: relative;
+            display: inline-block;
         }
-        
+
+        .footer-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--silver);
+        }
+
         .footer-links {
-            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
         }
-        
-        .footer-links li {
-            margin-bottom: 0.75rem;
-        }
-        
+
         .footer-links a {
             color: var(--light-gray);
             transition: var(--transition);
         }
-        
+
         .footer-links a:hover {
             color: var(--silver);
             padding-left: 5px;
         }
-        
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .contact-icon {
+            color: var(--silver);
+        }
+
         .social-links {
             display: flex;
             gap: 1rem;
             margin-top: 1rem;
         }
-        
+
         .social-link {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
             transition: var(--transition);
         }
-        
+
         .social-link:hover {
-            background-color: var(--silver);
+            background: var(--silver);
             color: var(--black);
         }
-        
+
         .footer-bottom {
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: var(--medium-gray);
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light-gray);
             font-size: 0.875rem;
         }
-        
-        /* WhatsApp Float Button */
-        .whatsapp-float {
+
+        /* Sticky CTA */
+        .sticky-cta {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25D366;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: var(--white);
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            z-index: 900;
+        }
+
+        .sticky-cta.show {
+            transform: translateY(0);
+        }
+
+        .sticky-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sticky-price {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--black);
+        }
+
+        .sticky-original {
+            font-size: 0.875rem;
+            text-decoration: line-through;
+            color: var(--medium-gray);
+            margin-left: 0.5rem;
+        }
+
+        .sticky-btn {
+            padding: 0.75rem 2rem;
+            background: var(--black);
             color: var(--white);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+        }
+
+        .sticky-btn:hover {
+            background: var(--dark-gray);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
             width: 60px;
             height: 60px;
+            background: #25D366;
+            color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
             box-shadow: var(--shadow-lg);
-            z-index: 1000;
+            z-index: 900;
             transition: var(--transition);
         }
-        
-        .whatsapp-float:hover {
-            transform: scale(1.1) translateY(-5px);
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
         }
-        
+
         /* Responsive Styles */
         @media (max-width: 992px) {
-            .product-gallery {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .video-container {
-                grid-column: span 2;
-            }
-        }
-        
-        @media (max-width: 768px) {
             .section {
                 padding: 60px 0;
             }
-            
-            .nav-toggle {
-                display: block;
+
+            .product-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
-            
-            .nav-menu {
+
+            .product-details {
+                position: static;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
                 position: fixed;
-                top: 68px;
-                left: -100%;
+                top: 72px;
+                left: 0;
                 width: 100%;
-                height: calc(100vh - 68px);
-                background-color: var(--white);
+                background: var(--white);
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                padding: 2rem 0;
+                gap: 1.5rem;
+                box-shadow: var(--shadow-md);
+                transform: translateY(-150%);
                 transition: var(--transition);
                 z-index: 999;
             }
-            
-            .nav-menu.active {
-                left: 0;
+
+            .nav-links.active {
+                transform: translateY(0);
             }
-            
-            .nav-menu li {
-                margin: 1rem 0;
+
+            .mobile-menu-btn {
+                display: block;
             }
-            
+
+            .hero-btns {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+
+            .pricing-card.popular:hover {
+                transform: scale(1) translateY(-5px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 40px 0;
+            }
+
             .hero {
                 min-height: 600px;
                 text-align: center;
-                justify-content: center;
             }
-            
+
             .hero-content {
-                max-width: 100%;
-                padding: 0 30px;
+                margin: 0 auto;
+                padding: 0 20px;
             }
-            
-            .hero-buttons {
+
+            .trust-badges {
                 justify-content: center;
             }
-            
-            .hero-badges {
-                justify-content: center;
-            }
-            
-            .testimonial-card {
-                min-width: 100%;
-            }
-        }
-        
-        @media (max-width: 576px) {
+
             .product-gallery {
                 grid-template-columns: 1fr;
             }
-            
-            .video-container {
+
+            .gallery-main {
                 grid-column: span 1;
             }
-            
-            .pricing-cards {
-                grid-template-columns: 1fr;
+
+            .sticky-container {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
             }
-            
-            .social-proof {
-                max-width: calc(100% - 40px);
+
+            .whatsapp-btn {
+                bottom: 80px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
             }
         }
-        
-        /* Custom OrderOnline Form Styling */
-        .ooef {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-        
-        .orderonline-embed-form {
-            font-family: 'Segoe UI', sans-serif;
-        }
-        
-        .ooef input, .ooef select, .ooef textarea {
-            background: rgba(255,255,255,0.9) !important;
-            border: 1px solid var(--light-gray) !important;
-            border-radius: 8px !important;
-            padding: 12px 15px !important;
-            font-family: 'Segoe UI', sans-serif !important;
-        }
-        
-        .ooef button[type="submit"] {
-            background: var(--silver) !important;
-            color: var(--black) !important;
-            border: none !important;
-            padding: 12px 24px !important;
-            border-radius: 30px !important;
-            font-weight: 600 !important;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.875rem !important;
-            transition: var(--transition) !important;
-        }
-        
-        .ooef button[type="submit"]:hover {
-            background: var(--white) !important;
-            transform: translateY(-3px) !important;
-            box-shadow: var(--shadow-md) !important;
-        }
-        
-        /* Animation Classes */
+
+        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        
-        @keyframes slideInRight {
-            from { transform: translateX(100%); }
-            to { transform: translateX(0); }
+
+        @keyframes slideInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
-        
+
         .animate-fade {
-            animation: fadeIn 1s ease;
+            animation: fadeIn 1s ease forwards;
         }
-        
-        .animate-slide {
-            animation: slideInRight 0.5s ease;
+
+        .animate-slide-up {
+            animation: slideInUp 0.8s ease forwards;
         }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header id="header">
         <div class="container header-container">
-            <a href="#" class="logo">FASHION.<span>ID</span></a>
-            <button class="nav-toggle" id="navToggle">☰</button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#features">Keunggulan</a></li>
-                <li><a href="#gallery">Galeri</a></li>
-                <li><a href="#testimonials">Testimoni</a></li>
-                <li><a href="#pricing">Harga</a></li>
-                <li><a href="#order">Pesan</a></li>
-            </ul>
+            <a href="#" class="logo">
+                <span>FASHION.ID</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#features">Keunggulan</a>
+                <a href="#testimonials">Testimoni</a>
+                <a href="#pricing">Harga</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Star Rhinestone Hair Comb</h1>
-            <p class="hero-subtitle">Aksesori rambut mewah dengan desain Korea yang membuat Anda terlihat lebih menawan</p>
-            <div class="hero-buttons">
-                <a href="#order" class="btn btn-primary">Pesan Sekarang</a>
-                <a href="#features" class="btn btn-secondary">Lihat Detail</a>
-            </div>
-            <div class="hero-badges">
-                <div class="badge">✔ Bahan Lembut & Nyaman</div>
-                <div class="badge">🚚 Gratis Ongkir</div>
-                <div class="badge">🔒 Garansi 100%</div>
+        <div class="container">
+            <div class="hero-content animate-slide-up">
+                <h1 class="hero-title">Star Rhinestone Hair Comb</h1>
+                <p class="hero-subtitle">Aksesori rambut mewah dengan rhinestone untuk tampilan elegan dan glamor setiap hari</p>
+                <div class="hero-btns">
+                    <a href="#pricing" class="btn btn-primary">Beli Sekarang</a>
+                    <a href="#video-demo" class="btn btn-secondary">Lihat Demo</a>
+                </div>
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <span>✓</span> <span>Garansi 100% Uang Kembali</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span>✓</span> <span>Gratis Ongkir</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span>✓</span> <span>Original</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Product Showcase -->
-    <section class="section product-showcase" id="gallery">
+    <section class="section product-showcase" id="product">
         <div class="container">
-            <h2 class="section-title">Galeri Produk</h2>
-            <p class="text-center mb-5">Lihat keindahan Star Rhinestone Hair Comb dari berbagai angle</p>
+            <h2 class="section-title">Star Rhinestone Hair Comb</h2>
+            <p class="text-center mb-5">Aksesori rambut premium dengan desain Korea yang elegan</p>
             
-            <div class="product-gallery">
-                <div class="gallery-item">
-                    <img src="https://cdn.techcloudly.com/image/f81d2360c218a27a24d241b74173c71935dc9a5e-600.jpeg" alt="Star Rhinestone Hair Comb - Tampilan Depan" class="gallery-img">
+            <div class="product-container">
+                <div class="product-gallery">
+                    <img src="https://cdn.techcloudly.com/image/fedb3fc4794b7326d55139084e1a7b7e4c22f8a9-700.webp" alt="Star Rhinestone Hair Comb" class="gallery-main">
+                    <img src="https://cdn.techcloudly.com/image/f81d2360c218a27a24d241b74173c71935dc9a5e-600.jpeg" alt="Star Rhinestone Hair Comb - Close Up">
+                    <img src="https://cdn.techcloudly.com/image/a10e02b4d214be3c07d87dd13e28745d7c14e06d-300.jpeg" alt="Star Rhinestone Hair Comb - Side View">
+                    <img src="https://cdn.techcloudly.com/image/f472538cff132e60109df796cdf654c28874ad7d-600.webp" alt="Star Rhinestone Hair Comb - Worn">
+                    <img src="https://cdn.techcloudly.com/image/80da8d7800977ca30b8add86045e1bcda7e3df8e-300.jpeg" alt="Star Rhinestone Hair Comb - Packaging">
+                    <img src="https://cdn.techcloudly.com/image/2d03bf12a114294a3b176f2bde41c18d0869b040-600.webp" alt="Star Rhinestone Hair Comb - Different Style">
                 </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.techcloudly.com/image/a10e02b4d214be3c07d87dd13e28745d7c14e06d-300.jpeg" alt="Star Rhinestone Hair Comb - Tampilan Samping" class="gallery-img">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.techcloudly.com/image/f472538cff132e60109df796cdf654c28874ad7d-600.webp" alt="Star Rhinestone Hair Comb - Tampilan Atas" class="gallery-img">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.techcloudly.com/image/80da8d7800977ca30b8add86045e1bcda7e3df8e-300.jpeg" alt="Star Rhinestone Hair Comb - Detail Rhinestone" class="gallery-img">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.techcloudly.com/image/2d03bf12a114294a3b176f2bde41c18d0869b040-600.webp" alt="Star Rhinestone Hair Comb - Tampilan Pakai" class="gallery-img">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.techcloudly.com/image/6d67f77720dffc60353e42b48dfcaa41916a65f3-300.png" alt="Star Rhinestone Hair Comb - Kemasan" class="gallery-img">
-                </div>
-                <div class="video-container">
-                    <iframe src="https://cdn.techcloudly.com/image/ac4bcc458ad2c288583efcac413d8bd489dc7b14.gif" frameborder="0" allowfullscreen></iframe>
+                
+                <div class="product-details">
+                    <h3 class="product-title">Star Rhinestone Hair Comb</h3>
+                    <div class="product-price">
+                        <span class="current-price">Rp125.499</span>
+                        <span class="original-price">Rp250.998</span>
+                        <span class="discount-badge">50% OFF</span>
+                    </div>
+                    
+                    <p class="product-description">
+                        ⭐ Aksesori rambut yang disisir halus dan lembut ini dapat menahan rambut Anda di tempatnya untuk waktu yang lama tanpa mudah rontok, membuat Anda terlihat lebih menawan dan cakap.<br><br>
+                        ⭐ Desain: Korean, barang dipacking dengan rapi dan aman. Kami memberikan harga terbaik bagi customer.<br><br>
+                        ⭐ Aksesori rambut yang dapat direnggangkan ini cocok untuk wanita dengan rambut ikal panjang, bergelombang, dan tebal. Sangat cocok untuk wanita yang bekerja setiap hari atau senang menari.
+                    </p>
+                    
+                    <div class="product-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Bahan lembut dan elastis, nyaman dipakai seharian</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Desain Korea dengan rhinestone yang mewah</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Cocok untuk berbagai jenis rambut</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Pengemasan rapi dan aman</span>
+                        </div>
+                    </div>
+                    
+                    <div class="promo-bundles">
+                        <h4 class="promo-title">💎 Paket Promo Spesial</h4>
+                        <div class="promo-item">
+                            <span class="promo-label">BELI 1</span>
+                            <span class="promo-price">Rp125.499 <span class="promo-original">Rp250.998</span></span>
+                        </div>
+                        <div class="promo-item">
+                            <span class="promo-label">BELI 2 GRATIS 1</span>
+                            <span class="promo-price">Rp148.599 <span class="promo-original">Rp296.998</span></span>
+                        </div>
+                        <div class="promo-item">
+                            <span class="promo-label">BELI 3 GRATIS 2</span>
+                            <span class="promo-price">Rp162.499 <span class="promo-original">Rp324.998</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="color-options">
+                        <h4>Pilih Warna:</h4>
+                        <div class="colors">
+                            <div class="color color-1 active" title="Hitam"></div>
+                            <div class="color color-2" title="Silver"></div>
+                            <div class="color color-3" title="Gold"></div>
+                            <div class="color color-4" title="Pink"></div>
+                        </div>
+                        <p class="note">Cantumkan warna yang Anda inginkan di catatan untuk pembelian promo</p>
+                    </div>
+                    
+                    <a href="#order-form" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem;">Pesan Sekarang</a>
                 </div>
             </div>
         </div>
@@ -977,108 +1467,115 @@
     <section class="section features" id="features">
         <div class="container">
             <h2 class="section-title">Keunggulan Produk</h2>
-            <p class="text-center mb-5">Mengapa Star Rhinestone Hair Comb menjadi pilihan tepat untuk Anda</p>
+            <p class="text-center mb-5">Mengapa Star Rhinestone Hair Comb menjadi pilihan utama?</p>
             
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">✨</div>
-                    <h3 class="feature-title">Desain Mewah</h3>
-                    <p>Dengan rhinestone yang berkilauan, memberikan kesan elegan dan mewah seperti aksesori Korea.</p>
+                <div class="feature-card animate-slide-up delay-1">
+                    <div class="feature-icon-lg">💎</div>
+                    <h3>Desain Mewah</h3>
+                    <p>Dekorasi rhinestone yang berkilau menambah kesan elegan dan glamor pada penampilan Anda.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👌</div>
-                    <h3 class="feature-title">Nyaman Dipakai</h3>
-                    <p>Bahan halus dan lembut yang tidak melukai rambut atau kulit kepala, nyaman dipakai seharian.</p>
+                
+                <div class="feature-card animate-slide-up delay-2">
+                    <div class="feature-icon-lg">👩</div>
+                    <h3>Nyaman Dipakai</h3>
+                    <p>Bahan lembut dan elastis yang tidak menarik rambut, nyaman dipakai seharian tanpa rasa sakit.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💪</div>
-                    <h3 class="feature-title">Tahan Lama</h3>
-                    <p>Konstruksi kokoh dengan bahan berkualitas tinggi yang tidak mudah rusak atau berubah warna.</p>
+                
+                <div class="feature-card animate-slide-up delay-3">
+                    <div class="feature-icon-lg">🔄</div>
+                    <h3>Fleksibel</h3>
+                    <p>Cocok untuk berbagai jenis rambut, baik lurus, ikal, bergelombang, maupun tebal.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👩</div>
-                    <h3 class="feature-title">Untuk Semua Rambut</h3>
-                    <p>Cocok untuk rambut ikal, lurus, tebal, atau tipis. Dapat menahan rambut dengan sempurna.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎁</div>
-                    <h3 class="feature-title">Kemasan Eksklusif</h3>
-                    <p>Dikirim dalam kemanan premium yang aman, cocok untuk hadiah atau koleksi pribadi.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
-                    <h3 class="feature-title">100% Garansi</h3>
-                    <p>Kami menjamin kepuasan Anda. Tidak puas? Kami akan mengembalikan uang Anda.</p>
+                
+                <div class="feature-card animate-slide-up delay-4">
+                    <div class="feature-icon-lg">🎁</div>
+                    <h3>Hadiah Sempurna</h3>
+                    <p>Kemasan premium membuatnya menjadi hadiah yang sempurna untuk orang terkasih.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials -->
     <section class="section testimonials" id="testimonials">
         <div class="container">
             <h2 class="section-title">Testimoni Pelanggan</h2>
-            <p class="text-center mb-5">Apa kata mereka tentang Star Rhinestone Hair Comb</p>
+            <p class="text-center mb-5">Apa kata mereka tentang Star Rhinestone Hair Comb?</p>
             
-            <div class="testimonial-slider">
-                <div class="testimonial-track" id="testimonialTrack">
-                    <!-- Testimonial 1 -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="testimonial-header">
-                                <img src="https://i.pinimg.com/736x/27/4f/2b/274f2b116fce6ab905bad0c2f0b314eb.jpg" alt="momyshasha1212" class="testimonial-avatar">
-                                <div class="testimonial-user">
-                                    <div class="testimonial-name">momyshasha1212</div>
-                                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+            <div class="testimonials-container">
+                <div class="testimonials-slider">
+                    <div class="testimonials-track" id="testimonialTrack">
+                        <div class="testimonial-card">
+                            <div class="testimonial">
+                                <div class="testimonial-header">
+                                    <img src="https://i.pinimg.com/736x/27/4f/2b/274f2b116fce6ab905bad0c2f0b314eb.jpg" alt="momyshasha1212" class="testimonial-avatar">
+                                    <div class="testimonial-user">
+                                        <div class="testimonial-name">momyshasha1212</div>
+                                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text">
+                                    "Udah dipakai seharian tetap gak sakit di rambut, bahannya lembut dan elastis ✨"
+                                </div>
+                                <div class="testimonial-media">
+                                    <img src="https://down-id.img.susercontent.com/file/id-11134103-7rbk9-mab64gpcvkjo0c.webp" alt="Testimoni momyshasha1212" class="testimonial-image" data-fullsize="https://down-id.img.susercontent.com/file/id-11134103-7rbk9-mab64gpcvkjo0c.webp">
                                 </div>
                             </div>
-                            <p class="testimonial-text">"Udah dipakai seharian tetap gak sakit di rambut, bahannya lembut dan elastis ✨"</p>
-                            <img src="https://down-id.img.susercontent.com/file/id-11134103-7rbk9-mab64gpcvkjo0c.webp" alt="Testimoni momyshasha1212" class="testimonial-media">
                         </div>
-                    </div>
-                    
-                    <!-- Testimonial 2 -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="testimonial-header">
-                                <img src="https://i.pinimg.com/736x/38/f2/8d/38f28d9e3aa7e67ca469217cf6e5b67c.jpg" alt="yulirahmawatisby20" class="testimonial-avatar">
-                                <div class="testimonial-user">
-                                    <div class="testimonial-name">yulirahmawatisby20</div>
-                                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial">
+                                <div class="testimonial-header">
+                                    <img src="https://i.pinimg.com/736x/38/f2/8d/38f28d9e3aa7e67ca469217cf6e5b67c.jpg" alt="yulirahmawatisby20" class="testimonial-avatar">
+                                    <div class="testimonial-user">
+                                        <div class="testimonial-name">yulirahmawatisby20</div>
+                                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text">
+                                    "Cocok banget buat anak-anak, gak bikin rambut ketarik atau kusut 😍"
+                                </div>
+                                <div class="testimonial-media">
+                                    <img src="https://down-id.img.susercontent.com/file/id-11134103-7rash-m0toll2wib86c2.webp" alt="Testimoni yulirahmawatisby20" class="testimonial-image" data-fullsize="https://down-id.img.susercontent.com/file/id-11134103-7rash-m0toll2wib86c2.webp">
                                 </div>
                             </div>
-                            <p class="testimonial-text">"Cocok banget buat anak-anak, gak bikin rambut ketarik atau kusut 😍"</p>
-                            <img src="https://down-id.img.susercontent.com/file/id-11134103-7rash-m0toll2wib86c2.webp" alt="Testimoni yulirahmawatisby20" class="testimonial-media">
                         </div>
-                    </div>
-                    
-                    <!-- Testimonial 3 -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="testimonial-header">
-                                <img src="https://i.pinimg.com/736x/b7/1b/6f/b71b6f41803d55cb95c0847990692682.jpg" alt="alisanabilla02" class="testimonial-avatar">
-                                <div class="testimonial-user">
-                                    <div class="testimonial-name">alisanabilla02</div>
-                                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial">
+                                <div class="testimonial-header">
+                                    <img src="https://i.pinimg.com/736x/b7/1b/6f/b71b6f41803d55cb95c0847990692682.jpg" alt="alisanabilla02" class="testimonial-avatar">
+                                    <div class="testimonial-user">
+                                        <div class="testimonial-name">alisanabilla02</div>
+                                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text">
+                                    "Warna & motifnya lucu-lucu, recommended!"
+                                </div>
+                                <div class="testimonial-media">
+                                    <img src="https://down-id.img.susercontent.com/file/id-11134103-7r98o-lrbpnqxsnpk722.webp" alt="Testimoni alisanabilla02" class="testimonial-image" data-fullsize="https://down-id.img.susercontent.com/file/id-11134103-7r98o-lrbpnqxsnpk722.webp">
                                 </div>
                             </div>
-                            <p class="testimonial-text">"Warna & motifnya lucu-lucu, recommended!"</p>
-                            <img src="https://down-id.img.susercontent.com/file/id-11134103-7r98o-lrbpnqxsnpk722.webp" alt="Testimoni alisanabilla02" class="testimonial-media">
                         </div>
-                    </div>
-                    
-                    <!-- Testimonial 4 -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="testimonial-header">
-                                <img src="https://i.pinimg.com/736x/85/b0/4e/85b04eac97adee300d5a13232d89654c.jpg" alt="yulirahmawatisby20" class="testimonial-avatar">
-                                <div class="testimonial-user">
-                                    <div class="testimonial-name">yulirahmawatisby20</div>
-                                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        
+                        <div class="testimonial-card">
+                            <div class="testimonial">
+                                <div class="testimonial-header">
+                                    <img src="https://i.pinimg.com/736x/85/b0/4e/85b04eac97adee300d5a13232d89654c.jpg" alt="yulirahmawatisby20" class="testimonial-avatar">
+                                    <div class="testimonial-user">
+                                        <div class="testimonial-name">yulirahmawatisby20</div>
+                                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text">
+                                    "Warnanya cerah, karakter Sanrionya gemesin banget. Si kecil langsung heboh waktu buka paketnya!"
+                                </div>
+                                <div class="testimonial-media">
+                                    <img src="https://down-id.img.susercontent.com/file/id-11134103-7r991-lzyygotidhy807.webp" alt="Testimoni yulirahmawatisby20" class="testimonial-image" data-fullsize="https://down-id.img.susercontent.com/file/id-11134103-7r991-lzyygotidhy807.webp">
                                 </div>
                             </div>
-                            <p class="testimonial-text">"Warnanya cerah, karakter Sanrionya gemesin banget. Si kecil langsung heboh waktu buka paketnya!"</p>
-                            <img src="https://down-id.img.susercontent.com/file/id-11134103-7r991-lzyygotidhy807.webp" alt="Testimoni yulirahmawatisby20" class="testimonial-media">
                         </div>
                     </div>
                 </div>
@@ -1091,317 +1588,521 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Lightbox -->
-        <div class="lightbox" id="lightbox">
-            <div class="lightbox-content">
-                <span class="lightbox-close" id="lightboxClose">&times;</span>
-                <img src="" alt="" class="lightbox-img" id="lightboxImg">
-            </div>
-        </div>
     </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">×</button>
+            <img src="" alt="" class="lightbox-img" id="lightboxImg">
+        </div>
+    </div>
 
     <!-- Pricing Section -->
     <section class="section pricing" id="pricing">
         <div class="container">
-            <h2 class="section-title">Harga Spesial</h2>
-            <p class="text-center mb-5">Pilih paket yang sesuai dengan kebutuhan Anda</p>
+            <h2 class="section-title">Pilihan Paket</h2>
+            <p class="text-center mb-5">Dapatkan harga terbaik dengan paket bundling kami</p>
             
             <div class="countdown">
-                <div>Promo akan berakhir dalam:</div>
-                <div class="countdown-timer" id="countdown">00:59:59</div>
+                <div class="countdown-title">PROMO BERAKHIR DALAM:</div>
+                <div class="countdown-timer">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">12</div>
+                        <div class="countdown-label">Jam</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">45</div>
+                        <div class="countdown-label">Menit</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">30</div>
+                        <div class="countdown-label">Detik</div>
+                    </div>
+                </div>
             </div>
             
             <div class="pricing-cards">
                 <div class="pricing-card">
                     <h3 class="pricing-title">Paket 1</h3>
-                    <div class="pricing-price">Rp 125.499</div>
-                    <div class="pricing-original">Rp 250.998</div>
-                    <ul class="pricing-features">
-                        <li>1 Star Rhinestone Hair Comb</li>
-                        <li>Gratis kemasan eksklusif</li>
-                        <li>Garansi 1 bulan</li>
-                        <li>Gratis ongkir seluruh Indonesia</li>
-                    </ul>
-                    <a href="#order" class="btn btn-primary">Pilih Paket Ini</a>
+                    <div class="pricing-price">Rp125.499</div>
+                    <div class="pricing-original">Rp250.998</div>
+                    
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <span>✓</span> <span>1x Star Rhinestone Hair Comb</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <span>✓</span> <span>Gratis kemasan premium</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <span>✓</span> <span>Bonus kartu ucapan</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#order-form" class="btn btn-secondary">Pilih Paket</a>
                 </div>
                 
                 <div class="pricing-card popular">
+                    <div class="popular-badge">TERLARIS</div>
                     <h3 class="pricing-title">Paket 2</h3>
-                    <div class="pricing-price">Rp 148.599</div>
-                    <div class="pricing-original">Rp 296.998</div>
-                    <ul class="pricing-features">
-                        <li>2 Star Rhinestone Hair Comb</li>
-                        <li>GRATIS 1 tambahan</li>
-                        <li>Total dapat 3 buah</li>
-                        <li>Garansi 3 bulan</li>
-                        <li>Gratis ongkir + bonus packing gift</li>
-                    </ul>
-                    <a href="#order" class="btn btn-primary">Pilih Paket Ini</a>
+                    <div class="pricing-price">Rp148.599</div>
+                    <div class="pricing-original">Rp296.998</div>
+                    
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <span>✓</span> <span>2x Star Rhinestone Hair Comb</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <span>✓</span> <span>1x GRATIS (Total 3 pcs)</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <span>✓</span> <span>Gratis kemasan premium</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <span>✓</span> <span>Bonus kartu ucapan</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#order-form" class="btn btn-primary">Pilih Paket</a>
                 </div>
                 
                 <div class="pricing-card">
                     <h3 class="pricing-title">Paket 3</h3>
-                    <div class="pricing-price">Rp 162.499</div>
-                    <div class="pricing-original">Rp 324.998</div>
-                    <ul class="pricing-features">
-                        <li>3 Star Rhinestone Hair Comb</li>
-                        <li>GRATIS 2 tambahan</li>
-                        <li>Total dapat 5 buah</li>
-                        <li>Garansi 6 bulan</li>
-                        <li>Gratis ongkir + bonus packing gift premium</li>
-                    </ul>
-                    <a href="#order" class="btn btn-primary">Pilih Paket Ini</a>
+                    <div class="pricing-price">Rp162.499</div>
+                    <div class="pricing-original">Rp324.998</div>
+                    
+                    <div class="pricing-features">
+                        <div class="pricing-feature">
+                            <span>✓</span> <span>3x Star Rhinestone Hair Comb</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <span>✓</span> <span>2x GRATIS (Total 5 pcs)</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <span>✓</span> <span>Gratis kemasan premium</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <span>✓</span> <span>Bonus kartu ucapan</span>
+                        </div>
+                        <div class="pricing-feature">
+                            <span>✓</span> <span>Gratis ongkir</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#order-form" class="btn btn-secondary">Pilih Paket</a>
                 </div>
             </div>
-            
-            <p class="text-center mt-4"><small>*Catatan: Cantumkan warna yang Anda inginkan di catatan pemesanan</small></p>
         </div>
     </section>
 
-    <!-- Order Form Section -->
-    <section class="section order-form" id="order">
+    <!-- Order Form -->
+    <section class="section order-form" id="order-form">
         <div class="container">
-            <h2 class="section-title">Form Pemesanan</h2>
-            <p class="text-center mb-5">Isi form berikut untuk memesan Star Rhinestone Hair Comb</p>
-            
             <div class="form-container">
-                <!-- OrderOnline Embed Code -->
-                <div class="ooef">
-                    <form class="orderonline-embed-form" data-username="nava" data-product-slug="star-rhinestone-broken-hair-comb" data-product-id="6883cd824f3a46aa290ea900" id="oo-embed-form-star-rhinestone-broken-hair-comb-4483" data-origin="orderonline">
-                        <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div>
-                    </form>
+                <div class="form-header">
+                    <h3 class="form-title">Form Pemesanan</h3>
+                    <p class="form-subtitle">Isi data berikut untuk memesan Star Rhinestone Hair Comb</p>
                 </div>
-                <script>
-                    if (typeof xLogError != 'function') {
-                        var xLogError = function (error) {
-                            var req = new XMLHttpRequest();
-                            var payload = JSON.stringify({
-                                url: document.location.href,
-                                line: error.line,
-                                stack: error.stack
-                            });
-                            var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
-                            req.open('POST', 'https://api.orderonline.id/log', true);
-                            req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-                            req.send(params);
-                        };
-                    }
-                    try {
-                        if (typeof xEmbedScript != 'function') {
-                            var xEmbedScript = function () {
-                                !function(w, d, e, v, id, t, s) {
-                                    if (d.getElementById(id)) return;
-                                    t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
-                                    s = d.getElementsByTagName(e)[0];
-                                    s.parentNode.insertBefore(t, s);
-                                }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
-                            };
-                        }
-                        if (typeof xEmbedInit != 'function') {
-                            var xEmbedInit = function (w, n) {
-                                if (w.ooe) return;
-                                n = w.ooe = function() {
-                                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-                                };
-                                if (!w._ooe) w._ooe = n;
-                                n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
-                            };
-                        }
-                        xEmbedInit(window);
-                        ooe('setup', 'redirect', 'https://nava.orderonline.id');
-                        ooe('init', '5f119cd08dcbdb2737678706', '6883cd824f3a46aa290ea900', '6883cd824f3a46aa290ea901', 'oo-embed-form-star-rhinestone-broken-hair-comb-4483', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":true});
-                        if (!window.jQuery) {
-                            !function(w, d, e, v, id, t, s) {
-                                if (d.getElementById(id)) return;
-                                t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
-                                t.addEventListener('load', xEmbedScript);
-                                s = d.getElementsByTagName(e)[0];
-                                s.parentNode.insertBefore(t, s);
-                            }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
-                        } else {
-                            xEmbedScript();
-                        }
-                    } catch (e) {
-                        xLogError(e);
-                        throw e;
-                    }
-                </script>
-                <!-- End OrderOnline Embed Code -->
+                <div class="form-body">
+                    <!-- OrderOnline Embed Code - v8.0.4 --> 
+                    <div class="ooef"> 
+                        <form class="orderonline-embed-form" data-username="nava" data-product-slug="star-rhinestone-broken-hair-comb" data-product-id="6883cd824f3a46aa290ea900" id="oo-embed-form-star-rhinestone-broken-hair-comb-4483" data-origin="orderonline"> 
+                            <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> 
+                        </form> 
+                    </div> 
+                    <script> 
+                        if (typeof xLogError != 'function') { 
+                            var xLogError = function (error) { 
+                                var req = new XMLHttpRequest(); 
+                                var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); 
+                                var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; 
+                                req.open('POST', 'https://api.orderonline.id/log', true); 
+                                req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); 
+                                req.send(params); 
+                            }; 
+                        } 
+                        try { 
+                            if (typeof xEmbedScript != 'function') { 
+                                var xEmbedScript = function () { 
+                                    !function(w, d, e, v, id, t, s) { 
+                                        if (d.getElementById(id)) return; 
+                                        t = d.createElement(e);t.async = !0;t.src = v;t.id = id; 
+                                        s = d.getElementsByTagName(e)[0]; 
+                                        s.parentNode.insertBefore(t, s); 
+                                    }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); 
+                                }; 
+                            } 
+                            if (typeof xEmbedInit != 'function') { 
+                                var xEmbedInit = function (w, n) { 
+                                    if (w.ooe) return; 
+                                    n = w.ooe = function() { 
+                                        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) 
+                                    }; 
+                                    if (!w._ooe) w._ooe = n; 
+                                    n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; 
+                                }; 
+                            } 
+                            xEmbedInit(window); 
+                            ooe('setup', 'redirect', 'https://nava.orderonline.id'); 
+                            ooe('init', '5f119cd08dcbdb2737678706', '6883cd824f3a46aa290ea900', '6883cd824f3a46aa290ea901', 'oo-embed-form-star-rhinestone-broken-hair-comb-4483', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":true}); 
+                            if (!window.jQuery) { 
+                                !function(w, d, e, v, id, t, s) { 
+                                    if (d.getElementById(id)) return; 
+                                    t = d.createElement(e);t.async = !0;t.src = v;t.id = id; 
+                                    t.addEventListener('load', xEmbedScript); 
+                                    s = d.getElementsByTagName(e)[0]; 
+                                    s.parentNode.insertBefore(t, s); 
+                                }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); 
+                            } else { 
+                                xEmbedScript(); 
+                            } 
+                        } catch (e) { 
+                            xLogError(e); 
+                            throw e; 
+                        } 
+                    </script> 
+                    <!-- End OrderOnline Embed Code -->
+                </div>
             </div>
+        </div>
+    </section>
 
-    <!-- Social Proof Popup -->
-    <div class="social-proof" id="socialProof">
-        <div class="social-proof-avatar" id="proofAvatar">P</div>
-        <div class="social-proof-content">
-            <div class="social-proof-text" id="proofText">Putri dari Jakarta baru saja memesan Star Rhinestone Hair Comb</div>
-            <div class="social-proof-time" id="proofTime">2 menit yang lalu</div>
+    <!-- Guarantee Section -->
+    <section class="section guarantee">
+        <div class="container">
+            <div class="guarantee-badge">✓</div>
+            <h2 class="section-title">Garansi Kepuasan 100%</h2>
+            <div class="guarantee-content">
+                <p>Kami menjamin kualitas produk Star Rhinestone Hair Comb. Jika Anda tidak puas dengan produk kami dalam 30 hari, kami akan mengembalikan uang Anda tanpa pertanyaan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+            <p class="text-center mb-5">Temukan jawaban untuk pertanyaan umum tentang Star Rhinestone Hair Comb</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Berapa lama waktu pengiriman?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Waktu pengiriman bervariasi tergantung lokasi Anda. Untuk wilayah Jawa biasanya 2-3 hari kerja, luar Jawa 3-7 hari kerja, dan wilayah Indonesia Timur 5-10 hari kerja.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Apakah produk ini original?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya, Star Rhinestone Hair Comb yang kami jual 100% original dengan kualitas terbaik. Kami bekerja sama langsung dengan produsen resmi untuk memastikan keaslian produk.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Bagaimana cara perawatan produk ini?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Untuk perawatan, cukup bersihkan dengan kain lembut yang sedikit basah. Hindari penggunaan bahan kimia atau alkohol yang dapat merusak rhinestone. Simpan di tempat kering dan hindari tekanan berat pada sisir.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Apakah ada garansi untuk produk ini?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami memberikan garansi 30 hari uang kembali jika produk tidak sesuai deskripsi atau cacat produksi. Untuk kerusakan akibat penggunaan yang tidak sesuai, tidak termasuk dalam garansi.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Bagaimana cara memilih warna?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Anda dapat memilih warna pada form pemesanan. Jika memesan paket promo, cantumkan warna yang diinginkan di catatan pemesanan. Kami akan mengirimkan sesuai stok yang tersedia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="stickyCta">
+        <div class="sticky-container">
+            <div class="sticky-price">
+                Rp125.499 <span class="sticky-original">Rp250.998</span>
+            </div>
+            <a href="#order-form" class="sticky-btn">Pesan Sekarang</a>
         </div>
     </div>
-    
+
+    <!-- Social Proof Notifications -->
+    <div class="social-proof" id="socialProof"></div>
+
     <script>
-        // Mobile Navigation Toggle
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
         
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
         });
         
-        // Smooth Scrolling for Anchor Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                if (navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                }
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
         
         // Testimonial Slider
-        const track = document.getElementById('testimonialTrack');
+        const testimonialTrack = document.getElementById('testimonialTrack');
         const dots = document.querySelectorAll('.slider-dot');
         let currentIndex = 0;
         let slideInterval;
         
-        function updateSlider(index) {
-            currentIndex = index;
-            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        function updateSlider() {
+            let slideWidth;
             
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentIndex);
+            if (window.innerWidth >= 992) {
+                slideWidth = testimonialTrack.children[0].offsetWidth;
+                testimonialTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            } else if (window.innerWidth >= 768) {
+                slideWidth = testimonialTrack.children[0].offsetWidth * 2;
+                testimonialTrack.style.transform = `translateX(-${currentIndex * (slideWidth / 2)}px)`;
+            } else {
+                slideWidth = testimonialTrack.children[0].offsetWidth;
+                testimonialTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            }
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
             });
         }
         
         function nextSlide() {
             currentIndex = (currentIndex + 1) % dots.length;
-            updateSlider(currentIndex);
+            updateSlider();
         }
         
-        dots.forEach((dot, index) => {
+        function startSlider() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+        
+        function stopSlider() {
+            clearInterval(slideInterval);
+        }
+        
+        dots.forEach(dot => {
             dot.addEventListener('click', () => {
-                clearInterval(slideInterval);
-                updateSlider(index);
+                currentIndex = parseInt(dot.dataset.index);
+                updateSlider();
+                stopSlider();
                 startSlider();
             });
         });
         
-        function startSlider() {
-            clearInterval(slideInterval);
-            slideInterval = setInterval(nextSlide, 5000);
-        }
-        
+        // Initialize slider
+        updateSlider();
         startSlider();
         
-        // Lightbox for Testimonial Images
+        // Pause slider on hover
+        testimonialTrack.addEventListener('mouseenter', stopSlider);
+        testimonialTrack.addEventListener('mouseleave', startSlider);
+        
+        // Lightbox for testimonial images
+        const testimonialImages = document.querySelectorAll('.testimonial-image');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightboxImg');
         const lightboxClose = document.getElementById('lightboxClose');
-        const testimonialMedias = document.querySelectorAll('.testimonial-media');
         
-        testimonialMedias.forEach(media => {
-            media.addEventListener('click', () => {
-                lightboxImg.src = media.src;
-                lightboxImg.alt = media.alt;
-                lightbox.classList.add('show');
+        testimonialImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.dataset.fullsize;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
             });
         });
         
-        lightboxClose.addEventListener('click', () => {
-            lightbox.classList.remove('show');
-        });
-        
+        lightboxClose.addEventListener('click', closeLightbox);
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
-                lightbox.classList.remove('show');
+                closeLightbox();
             }
+        });
+        
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+                
+                // Close other items
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.parentElement.classList.remove('active');
+                    }
+                });
+            });
         });
         
         // Countdown Timer
         function updateCountdown() {
-            const countdown = document.getElementById('countdown');
-            let time = 3599; // 59 minutes 59 seconds
+            const hoursElement = document.getElementById('hours');
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
             
-            const timer = setInterval(() => {
-                const minutes = Math.floor(time / 60);
-                const seconds = time % 60;
+            let hours = parseInt(hoursElement.textContent);
+            let minutes = parseInt(minutesElement.textContent);
+            let seconds = parseInt(secondsElement.textContent);
+            
+            seconds--;
+            
+            if (seconds < 0) {
+                seconds = 59;
+                minutes--;
                 
-                countdown.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-                
-                if (time === 0) {
-                    clearInterval(timer);
-                    countdown.textContent = "Promo telah berakhir!";
-                } else {
-                    time--;
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                    
+                    if (hours < 0) {
+                        hours = 23;
+                        minutes = 59;
+                        seconds = 59;
+                    }
                 }
-            }, 1000);
+            }
+            
+            hoursElement.textContent = hours.toString().padStart(2, '0');
+            minutesElement.textContent = minutes.toString().padStart(2, '0');
+            secondsElement.textContent = seconds.toString().padStart(2, '0');
         }
         
-        updateCountdown();
+        setInterval(updateCountdown, 1000);
         
-        // Social Proof Popup
+        // Sticky CTA
+        const stickyCta = document.getElementById('stickyCta');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                stickyCta.classList.add('show');
+            } else {
+                stickyCta.classList.remove('show');
+            }
+        });
+        
+        // Social Proof Notifications
         const socialProof = document.getElementById('socialProof');
-        const proofAvatar = document.getElementById('proofAvatar');
-        const proofText = document.getElementById('proofText');
-        const proofTime = document.getElementById('proofTime');
-        
         const names = ['Vina', 'Dina', 'Kartika', 'Lestari', 'Putri', 'Maya Sari', 'Rani', 'Permata', 'Lestari F'];
         const cities = ['Jakarta', 'Surabaya', 'Bandung', 'Medan', 'Bekasi', 'Tangerang', 'Depok', 'Semarang'];
         
-        function getRandomInt(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-        
-        function showSocialProof() {
-            const randomName = names[getRandomInt(0, names.length - 1)];
-            const randomCity = cities[getRandomInt(0, cities.length - 1)];
-            const randomMinutes = getRandomInt(1, 15);
+        function createNotification() {
+            const name = names[Math.floor(Math.random() * names.length)];
+            const city = cities[Math.floor(Math.random() * cities.length)];
+            const minutes = Math.floor(Math.random() * 15) + 1;
             
-            proofAvatar.textContent = randomName.charAt(0);
-            proofText.textContent = `${randomName} dari ${randomCity} baru saja memesan Star Rhinestone Hair Comb`;
-            proofTime.textContent = `${randomMinutes} menit yang lalu`;
+            const notification = document.createElement('div');
+            notification.className = 'proof-notification';
+            notification.innerHTML = `
+                <div class="proof-avatar">${name.charAt(0)}</div>
+                <div class="proof-content">
+                    <div class="proof-text">${name} dari ${city} baru saja memesan Star Rhinestone Hair Comb</div>
+                    <div class="proof-time">${minutes} menit yang lalu</div>
+                </div>
+                <div class="proof-close">×</div>
+            `;
             
-            socialProof.classList.add('show');
+            socialProof.appendChild(notification);
             
+            // Show notification
             setTimeout(() => {
-                socialProof.classList.remove('show');
+                notification.classList.add('show');
+            }, 100);
+            
+            // Close button
+            const closeBtn = notification.querySelector('.proof-close');
+            closeBtn.addEventListener('click', () => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            });
+            
+            // Auto remove
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
             }, 5000);
         }
         
-        // Show first notification after 3 seconds
-        setTimeout(() => {
-            showSocialProof();
-            
-            // Then show every 10 seconds
-            setInterval(showSocialProof, 10000);
-        }, 3000);
+        // Initial notifications
+        setTimeout(createNotification, 3000);
+        setTimeout(createNotification, 8000);
         
-        // Pause on hover
-        socialProof.addEventListener('mouseenter', () => {
-            socialProof.classList.add('show');
+        // Regular interval
+        setInterval(createNotification, 10000);
+        
+        // Color Selection
+        const colors = document.querySelectorAll('.color');
+        
+        colors.forEach(color => {
+            color.addEventListener('click', () => {
+                colors.forEach(c => c.classList.remove('active'));
+                color.classList.add('active');
+            });
         });
         
-        // Scroll Animation
-        const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.section, .feature-card, .pricing-card, .testimonial-card');
-            
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.3;
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
                 
-                if (elementPosition < screenPosition) {
-                    element.classList.add('animate-fade');
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.textContent = '☰';
+                    }
                 }
             });
-        };
-        
-        window.addEventListener('scroll', animateOnScroll);
-        window.addEventListener('load', animateOnScroll);
+        });
     </script>
 </body>
 </html>
